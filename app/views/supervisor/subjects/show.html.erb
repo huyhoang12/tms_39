@@ -1,0 +1,30 @@
+<% provide(:title, "Subject") %>
+
+<div class="col-md-12">
+  <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h3 class="panel-title"><%= @subject.name %></h3>
+      </div>
+      <div class="panel-body">
+        <p><%= @subject.description %></p>
+        <div class="table-responsive">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th><%= t("taskName") %></th>
+                <th><%= t("taskDescription") %></th>
+              </tr>
+            </thead>
+            <tbody>
+              <% @tasks.each do |task| %>
+                  <tr>
+                    <td><%= task.name %></td>
+                    <td><%= task.description %></td>
+                  </tr>
+              <% end %>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+</div>

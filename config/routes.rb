@@ -12,5 +12,7 @@ Rails.application.routes.draw do
   resources :courses
   namespace :supervisor do
     resources :users
+    resources :subjects
+    resources :tasks
   end
 end
