@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151104064509) do
+ActiveRecord::Schema.define(version: 20151105031347) do
 
   create_table "activities", force: :cascade do |t|
     t.string   "action"
@@ -99,6 +99,9 @@ ActiveRecord::Schema.define(version: 20151104064509) do
     t.boolean  "supervisor"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
+    t.string   "remember_digest"
   end
+
+  add_index "users", ["email"], name: "index_users_on_email", unique: true
 
 end

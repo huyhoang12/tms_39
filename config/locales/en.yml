@@ -21,3 +21,27 @@
 
 en:
   hello: "Hello world"
+  userProfile: 'Profile User'
+  userNameTag: 'Name'
+  userEmailTag: 'Email'
+  userSupervisorTag: 'Supervisor'
+  userCreatedAtTag: 'Created At'
+  home: "Home"
+  help: "Help"
+  login: "Log in"
+  tms: "TMS_39 TRAINEE"
+  logout: "Log out"
+  user: "Users"
+  profile: "Profile"
+  setting: "Settings"
+  remember: "Remember me on this computer"
+  btnsignup: "Sign up now!"
+  stms: "TMS_39 trainee"
+  adAbout: "This is the project TSM_39 trainee developer for everyone."
+  adcontact: "Contact the Ruby on Rails Tutorial about the sample app at the"
+  adcontact2: " contact"
+  linkcontact: "http://www.railstutorial.org/#contact"
+  Account: "Account"
+  danger: "Invalid email/password combination"
+  contact: "Contact"
+  about: "About"
