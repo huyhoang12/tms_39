@@ -21,3 +21,8 @@
 
 en:
   hello: "Hello world"
+  userProfile: 'Profile User'
+  userNameTag: 'Name'
+  userEmailTag: 'Email'
+  userSupervisorTag: 'Supervisor'
+  userCreatedAtTag: 'Created At'
