@@ -33,7 +33,7 @@ class UsersController < ApplicationController
     @users = User.supervisor.paginate page: params[:page], per_page: 6
   end
 
-  def show 
+  def show
     @user= User.find params[:id]
   end
 

@@ -54,3 +54,6 @@ en:
   all_user: "All users in all Source"
   login2: "Please log in"
   allu: "All users"
+  manageTrainee: 'Manage Trainee'
+  showTrainee: 'Show All Trainee'
+  addTrainee: 'Add New Trainee'
