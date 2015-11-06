@@ -1,9 +1,9 @@
 module SessionsHelper
-  def log_in user 
+  def log_in user
     session[:user_id] = user.id
   end
 
-  def remember user 
+  def remember user
     user.remember
     cookies.permanent.signed[:user_id] = user.id
     cookies.permanent[:remember_token] = user.remember_token
@@ -27,13 +27,27 @@ module SessionsHelper
 
   def forget user
     user.forget
-    cookies.delete :user_id 
-    cookies.delete :remember_token 
+    cookies.delete :user_id
+    cookies.delete :remember_token
   end
 
   def log_out
-    forget current_user 
-    session.delete :user_id 
+    forget current_user
+    session.delete :user_id
     @current_user = nil
+  end
+
+  # Stores the URL trying to be accessed.
+  def store_location
+    session[:forwarding_url] = request.url if request.get?
+  end
+
+  # Confirms a logged-in user.
+  def logged_in_user
+    unless logged_in?
+      store_location
+      flash[:danger] = t('mustLogIn')
+      redirect_to login_url
+    end
   end
 end

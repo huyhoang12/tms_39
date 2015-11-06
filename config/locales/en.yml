@@ -45,3 +45,9 @@ en:
   danger: "Invalid email/password combination"
   contact: "Contact"
   about: "About"
+  userEditProfile: 'Edit Profile User'
+  userUpdateAtTag: 'Lastest Update Profile'
+  mustLogIn: 'Please Login'
+  SuccessUpdate: 'Upadte Successed'
+  saveUpdate: 'Save Update'
+  editProfile: 'Edit Profile'
