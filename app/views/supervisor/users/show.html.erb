@@ -1,0 +1,48 @@
+<% provide(:title, @user.name) %>
+<div class="row">
+  <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xs-offset-0
+  col-sm-offset-0 col-md-offset-0 col-lg-offset-0">
+    <div class="panel panel-info">
+      <div class="panel-heading">
+        <h3 class="panel-title"><%= t "userProfile" %></h3>
+      </div>
+      <div class="panel-body">
+        <div class="row">
+          <div class="col-md-3 col-lg-3 " align="center">
+            <%= gravatar_for @user %>
+            <div><%= link_to t("editProfile") , edit_user_path %></div>
+          </div>
+          <div class=" col-md-9 col-lg-9 ">
+            <table class="table">
+                <tr>
+                  <td><%= t "userNameTag" %>:</td>
+                  <td><b><%= @user.name %></b></td>
+                </tr>
+                <tr>
+                  <td><%= t "userEmailTag" %>:</td>
+                  <td><b><%= @user.email %></b></td>
+                </tr>
+                <tr>
+                  <td><%= t "userSupervisorTag" %>:</td>
+                  <td><b><%= @user.supervisor %></b></td>
+                </tr>
+                <tr>
+                  <td><%= t "userCreatedAtTag" %>:</td>
+                  <td><%= @user.created_at.strftime("%A %d-%m-%Y") %></td>
+                </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xs-offset-0
+  col-sm-offset-0 col-md-offset-0 col-lg-offset-0">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title"><%= t "activities" %></h3>
+      </div>
+      <div class="panel-body"></div>
+    </div>
+  </div>
+</div>

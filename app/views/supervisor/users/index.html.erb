@@ -1,0 +1,32 @@
+<div class="container">
+  <h1><%= t "traineeList" %></h1>
+  <table class="table">
+    <thead>
+      <tr>
+        <th><%= t "id" %></th>
+        <th><%= t "userNameTag" %></th>
+        <th><%= t "userEmailTag" %></th>
+        <th><%= t "userCreatedAtTag" %></th>
+        <th><%= t "editTrainee" %></th>
+        <th><%= t "deleteTrainee" %></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @trainees.each do|trainee| %>
+        <tr>
+          <td><%= trainee.id %></td>
+          <td><%= trainee.name %></td>
+          <td><%= trainee.email %></td>
+          <td><%= l trainee.created_at, format: :define %></td>
+          <td><%= link_to t("editTrainee"), edit_supervisor_user_path(trainee.id) %></td>
+          <td>
+            <%= link_to t("deleteTrainee"), supervisor_user_path(trainee.id), method: :delete,
+              data: {confirm: "Are you sure?"}, title: "Delete #{trainee.name}",
+              class: 'text-danger' %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <div class="center"><%= will_paginate @trainees %></div>
+</div>

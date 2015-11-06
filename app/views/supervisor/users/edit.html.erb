@@ -12,7 +12,7 @@
             <%= gravatar_for @user %>
           </div>
           <div class=" col-md-9 col-lg-9 ">
-            <%= form_for @user do |f| %>
+            <%= form_for @user, url: supervisor_user_path do |f| %>
               <%= render "layouts/messages", object: f.object %>
               <table class="table">
                   <tr>
@@ -48,7 +48,7 @@
                   </tr>
                   <tr>
                     <td><%= t "userUpdateAtTag" %>:</td>
-                    <td><%= @user.updated_at.strftime("%A %d-%m-%Y") %></td>
+                    <td><%= l @user.updated_at, format: :define %></td>
                   </tr>
                   <tr>
                     <td colspan="2">
