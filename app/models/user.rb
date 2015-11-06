@@ -3,16 +3,16 @@ class User < ActiveRecord::Base
   attr_accessor :remember_token
   validates :name, presence: true, length: { maximum: 50 }
   validates :email, presence: true, length: { maximum: 255 },
-                    format: { with: VALID_EMAIL_REGEX },
-                    uniqueness: { case_sensitive: false }
+    format: { with: VALID_EMAIL_REGEX },
+      uniqueness: { case_sensitive: false }
   validates :password, presence: true, length: { minimum: 6 }, allow_nil: true
   has_secure_password
   before_save { self.email = email.downcase }
-  
+  scope :supervisor, ->{where supervisor: "f"}
   def User.digest string
     cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST :
-    BCrypt::Engine.cost
-    BCrypt::Password.create(string, cost: cost)
+      BCrypt::Engine.cost
+        BCrypt::Password.create(string, cost: cost)
   end
   
   def User.new_token
@@ -40,4 +40,3 @@ class User < ActiveRecord::Base
     self.email= email.downcase
   end
 end
-

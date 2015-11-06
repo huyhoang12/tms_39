@@ -51,3 +51,6 @@ en:
   SuccessUpdate: 'Upadte Successed'
   saveUpdate: 'Save Update'
   editProfile: 'Edit Profile'
+  all_user: "All users in all Source"
+  login2: "Please log in"
+  allu: "All users"
