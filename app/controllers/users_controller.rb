@@ -30,7 +30,7 @@ class UsersController < ApplicationController
   end
 
   def index
-    @users = User.supervisor.paginate page: params[:page], per_page: 6
+    @users = User.supervisors.paginate page: params[:page], per_page: 6
   end
 
   def show
@@ -59,6 +59,4 @@ class UsersController < ApplicationController
     @user = User.find params[:id]
     redirect_to root_url unless @user == current_user
   end
-
-
 end

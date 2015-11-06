@@ -1,0 +1,9 @@
+<%= will_paginate %>
+<ul class="users">
+  <% @courses.each do |course| %>
+    <li>
+      <%= link_to course.name %>
+    </li>
+  <% end %>
+</ul>
+<%= will_paginate %>
