@@ -5,8 +5,8 @@ User.create!(name:  "Supervisor",
              supervisor: true)
 20.times do |n|
   name  = Faker::Name.name
-  email = "admin-#{n+1}@gmial.com"
-  password = "password"
+  email = "trainee-#{n+1}@gmail.com"
+  password = "123456"
   supers = "false"
   User.create!(name:  name,
    email: email,
@@ -16,7 +16,20 @@ User.create!(name:  "Supervisor",
 end
 
 20.times do |n|
-name =  "day la khoa hoc k123#{n}"
-Course.create!(
-  name: name)
+  name  = Faker::Name.name
+  email = "supervisor-#{n+1}@gmail.com"
+  password = "123456"
+  supers = "true"
+  User.create!(name:  name,
+   email: email,
+   password:              password,
+   password_confirmation: password,
+   supervisor: supers)
+end
+
+50.times do |n|
+  name  = Faker::Lorem.word
+  description = Faker::Lorem.paragraph
+  Subject.create!(name:  name,
+  description: description)
 end

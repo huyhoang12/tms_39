@@ -1,0 +1,49 @@
+<li><%= link_to t("course"), courses_path %></li>
+<li><%= link_to "Users", users_path %></li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+    <%= t "manageTrainee" %> <b class="caret"></b>
+  </a>
+  <ul class="dropdown-menu">
+    <li><%= link_to t("showTrainee"), supervisor_users_path %></li>
+    <li><%= link_to t("addTrainee"), new_supervisor_user_path  %></li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+    <%= t "manageSubject" %> <b class="caret"></b>
+  </a>
+  <ul class="dropdown-menu">
+    <li>
+      <%= link_to t("showAllSubject"), supervisor_subjects_path %>
+    </li>
+    <li>
+      <%= link_to t("addNewSubject"), new_supervisor_subject_path %>
+    </li>
+  </ul>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+    <%= t "manageCourse" %> <b class="caret"></b>
+  </a>
+  <ul class="dropdown-menu">
+    <li>
+      <%= link_to t("showCourse"), supervisor_courses_path %>
+    </li>
+    <li>
+      <%= link_to t("addCourse"), new_supervisor_course_path  %>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+    <%= t"Account"%> <b class="caret"></b>
+  </a>
+  <ul class="dropdown-menu">
+    <li><%= link_to t("profile"), current_user %></li>
+    <li><%= link_to t("setting"), '#' %></li>
+    <li class="divider"></li>
+    <li>
+      <%= link_to t("logout"), logout_path, method: "delete" %>
+    </li>
+  </ul>
+</li>

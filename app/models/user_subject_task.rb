@@ -1,4 +1,4 @@
 class UserSubjectTask < ActiveRecord::Base
   belongs_to :task
-  belongs_to :usersubject
+  belongs_to :user_subject
 end
