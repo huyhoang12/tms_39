@@ -14,3 +14,9 @@ User.create!(name:  "Supervisor",
    password_confirmation: password,
    supervisor: supers)
 end
+
+20.times do |n|
+name =  "day la khoa hoc k123#{n}"
+Course.create!(
+  name: name)
+end
