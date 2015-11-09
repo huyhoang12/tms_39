@@ -4,11 +4,11 @@
 #
 # To use the locales, use `I18n.t`:
 #
-#     I18n.t 'hello'
+#     I18n.t "hello"
 #
 # In views, this is aliased to just `t`:
 #
-#     <%= t('hello') %>
+#     <%= t("hello") %>
 #
 # To use a different locale, set it with `I18n.locale`:
 #
@@ -20,12 +20,15 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  time:
+    formats:
+      define: "%A %d-%m-%Y"
   hello: "Hello world"
-  userProfile: 'Profile User'
-  userNameTag: 'Name'
-  userEmailTag: 'Email'
-  userSupervisorTag: 'Supervisor'
-  userCreatedAtTag: 'Created At'
+  userProfile: "Profile User"
+  userNameTag: "Name"
+  userEmailTag: "Email"
+  userSupervisorTag: "Supervisor"
+  userCreatedAtTag: "Created At"
   home: "Home"
   help: "Help"
   login: "Log in"
@@ -45,15 +48,22 @@ en:
   danger: "Invalid email/password combination"
   contact: "Contact"
   about: "About"
-  userEditProfile: 'Edit Profile User'
-  userUpdateAtTag: 'Lastest Update Profile'
-  mustLogIn: 'Please Login'
-  SuccessUpdate: 'Upadte Successed'
-  saveUpdate: 'Save Update'
-  editProfile: 'Edit Profile'
+  userEditProfile: "Edit Profile User"
+  userUpdateAtTag: "Lastest Update Profile"
+  mustLogIn: "Please Login"
+  SuccessUpdate: "Upadte Successed"
+  saveUpdate: "Save Update"
+  editProfile: "Edit Profile"
   all_user: "All users in all Source"
   login2: "Please log in"
   allu: "All users"
-  manageTrainee: 'Manage Trainee'
-  showTrainee: 'Show All Trainee'
-  addTrainee: 'Add New Trainee'
+  manageTrainee: "Manage Trainee"
+  showTrainee: "Show All Trainee"
+  addTrainee: "Add New Trainee"
+  id: "ID"
+  editTrainee: "Edit"
+  deleteTrainee: "Delete"
+  traineeList: "List Trainee"
+  passConfirm: "Password Confirmation"
+  deletedUser: "Deleted User"
+  activities: "Activities of user"
