@@ -1,0 +1,11 @@
+<%= form_for @subject, url: supervisor_subjects_path do |f| %>
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name, class: "form-control" %>
+  </p>
+  <p>
+   <button class="add_fields btn btn-primary" name="tasks"><%= t "addTask" %></button>
+  </p>
+  <p><%= f.submit t("createSubject"), class: "btn btn-primary" %></p>
+  <%= new_fields_template f, :tasks %>
+<% end %>

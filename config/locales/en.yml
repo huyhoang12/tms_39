@@ -68,3 +68,19 @@ en:
   deletedUser: "Deleted User"
   activities: "Activities of user"
   course: "Courses"
+
+  manageTrainee: "Manage Trainee"
+  showTrainee: "Show All Trainee"
+  addTrainee: "Add New Trainee"
+  # Dat added
+  manageSubject: "Manage Subject"
+  createSubject: "Create new subject"
+  showAllSubject: "Show All Subject"
+  addNewSubject: "Add New Subject"
+  taskName: "Task name"
+  taskDescription: "Description"
+  linkSignup: "Sign up now!"
+  signupSuccess: "Sign up success!"
+  addTask: "Add task"
+  deleteTask: "Delete"
+
