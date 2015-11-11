@@ -8,6 +8,7 @@ class Supervisor::SubjectsController < ApplicationController
 
   def create
     @subject = Subject.new subject_params
+    debugger
     if @subject.save
       redirect_to supervisor_subject_path @subject
     else
@@ -23,6 +24,6 @@ class Supervisor::SubjectsController < ApplicationController
   private
 
   def subject_params
-    params.require(:subject).permit(:name, tasks_attributes: [:name])
+    params.require(:subject).permit(:name, tasks_attributes: [:name, :_destroy])
   end
 end

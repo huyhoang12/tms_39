@@ -81,4 +81,6 @@ en:
   taskDescription: "Description"
   linkSignup: "Sign up now!"
   signupSuccess: "Sign up success!"
+  addTask: "Add task"
+  deleteTask: "Delete"
 

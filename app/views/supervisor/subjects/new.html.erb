@@ -3,14 +3,6 @@
 
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
-    <%= form_for @subject, url: supervisor_subjects_path do |f| %>
-      <%= f.label :Subject_name %>
-      <%= f.text_field :name, class: "form-control" %>
-      <%= f.fields_for :tasks do |task| %>
-        <%= task.label :Task_name %>
-        <%= task.text_field :name, class: "form-control" %>
-      <% end %>
-      <%= f.submit t("createSubject"), class: "btn btn-primary" %>
-    <% end %>
+    <%= render partial: "form" %>
   </div>
 </div>
