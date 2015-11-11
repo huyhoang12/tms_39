@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151105031347) do
+ActiveRecord::Schema.define(version: 20151110110048) do
 
   create_table "activities", force: :cascade do |t|
     t.string   "action"
@@ -24,21 +24,21 @@ ActiveRecord::Schema.define(version: 20151105031347) do
   add_index "activities", ["target_id"], name: "index_activities_on_target_id"
   add_index "activities", ["user_id"], name: "index_activities_on_user_id"
 
-  create_table "courses", force: :cascade do |t|
-    t.string   "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "couser_subjects", force: :cascade do |t|
-    t.integer  "couser_id"
+  create_table "course_subjects", force: :cascade do |t|
+    t.integer  "course_id"
     t.integer  "subject_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  add_index "couser_subjects", ["couser_id"], name: "index_couser_subjects_on_couser_id"
-  add_index "couser_subjects", ["subject_id"], name: "index_couser_subjects_on_subject_id"
+  add_index "course_subjects", ["course_id"], name: "index_course_subjects_on_course_id"
+  add_index "course_subjects", ["subject_id"], name: "index_course_subjects_on_subject_id"
+
+  create_table "courses", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "subjects", force: :cascade do |t|
     t.string   "name"

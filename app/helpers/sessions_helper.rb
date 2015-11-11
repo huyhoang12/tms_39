@@ -50,4 +50,8 @@ module SessionsHelper
       redirect_to login_url
     end
   end
+
+  def is_supervisor?
+    current_user.supervisor?
+  end
 end

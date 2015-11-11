@@ -68,7 +68,6 @@ en:
   deletedUser: "Deleted User"
   activities: "Activities of user"
   course: "Courses"
-
   manageTrainee: "Manage Trainee"
   showTrainee: "Show All Trainee"
   addTrainee: "Add New Trainee"
@@ -83,4 +82,6 @@ en:
   signupSuccess: "Sign up success!"
   addTask: "Add task"
   deleteTask: "Delete"
-
+  manageCourse: "Manage Cousers"
+  showCourse: "List Cousers"
+  addCourse: "Add New Course"

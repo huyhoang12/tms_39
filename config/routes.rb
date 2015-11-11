@@ -14,5 +14,6 @@ Rails.application.routes.draw do
     resources :users
     resources :subjects
     resources :tasks
+    resources :courses
   end
 end
