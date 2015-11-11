@@ -33,3 +33,8 @@ end
   Subject.create!(name:  name,
   description: description)
 end
+
+20.times do |subject|
+  name = Faker::Name.name
+  Subject.create!(name: name)
+end
