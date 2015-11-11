@@ -1,0 +1,17 @@
+<% provide :title, t("titleEditSubject") %>
+<h1><%= t "updateSubject" %></h1>
+<%= form_for [:supervisor, @subject] do |f| %>
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name, class: "form-control" %>
+  </p>
+  <%= f.fields_for :tasks do |task| %>
+    <%= render partial: "task_fields", locals: {f: task} %>
+  <% end %>
+  <p>
+   <button class="add_fields btn btn-primary" name="tasks"><%= t "addTask" %></button>
+  </p>
+  <p><%= f.submit t("updateSubject"), class: "btn btn-primary" %></p>
+  <%= new_fields_template f, :tasks %>
+<% end %>
+
