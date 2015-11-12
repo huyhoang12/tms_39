@@ -1,0 +1,3 @@
+<% @course.subjects.each do |subject| %>
+    <%= link_to subject.name, supervisor_subject_path(subject.id) %>,
+<% end %>

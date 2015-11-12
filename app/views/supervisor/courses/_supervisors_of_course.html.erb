@@ -1,0 +1,4 @@
+<% @course.users.supervisors.each do |supervisor| %>
+  <%= link_to supervisor.name, supervisor_user_path(supervisor.id) %>,
+<% end %>
+
